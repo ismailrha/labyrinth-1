@@ -10,18 +10,18 @@ public class PathTaken {
 	public PathTaken() {
 		pathTaken = new ArrayList<Gate>();
 	}
-	
+
 	public void addMove(Gate gate) {
-	
+
 		pathTaken.add(gate);
 	}
-	
+
 	public List<String> getTrackedPath() {
-		List <String> trackedPath = new ArrayList<String>();
-		for(Gate gate:pathTaken)
-			if(!gate.isGateNormal())
-			trackedPath.add(gate.gettingSensoredPath());
-		
+		List<String> trackedPath = new ArrayList<String>();
+		for (Gate gate : pathTaken)
+			if (!gate.isGateNormal())
+				trackedPath.add(gate.gettingSensoredPath());
+
 		return trackedPath;
 	}
 }
