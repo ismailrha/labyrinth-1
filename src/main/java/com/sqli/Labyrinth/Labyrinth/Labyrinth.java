@@ -25,7 +25,7 @@ public class Labyrinth {
                 parser = new SensorGateParser();
             }
 
-            this.gates.add(parser.parser(path));
+            this.gates.add(parser.parse(path));
         }
     }
 
