@@ -5,23 +5,25 @@ import java.util.List;
 
 public class PathTaken {
 
-	List<Gate> pathTaken;
+    private List<Gate> pathTaken;
 
-	public PathTaken() {
-		pathTaken = new ArrayList<Gate>();
-	}
+    public PathTaken() {
+        pathTaken = new ArrayList<Gate>();
+    }
 
-	public void addMove(Gate gate) {
+    public void addMove(final Gate gate) {
 
-		pathTaken.add(gate);
-	}
+        pathTaken.add(gate);
+    }
 
-	public List<String> getTrackedPath() {
-		List<String> trackedPath = new ArrayList<String>();
-		for (Gate gate : pathTaken)
-			if (!gate.isGateNormal())
-				trackedPath.add(gate.gettingSensoredPath());
+    public List<String> getTrackedPath() {
+        List<String> trackedPath = new ArrayList<String>();
+        for (Gate gate : pathTaken) {
+            if (!gate.isGateNormal()) {
+                trackedPath.add(gate.gettingPathwithSensor());
+            }
+        }
 
-		return trackedPath;
-	}
+        return trackedPath;
+    }
 }

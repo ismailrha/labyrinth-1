@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
-
-
 public class LabyrinthTest {
 
 
@@ -78,7 +76,7 @@ public class LabyrinthTest {
 	@Test
 	public void allow_Walker_To_Close_Passed_Door()
 			throws IllegalMoveException, ClosedDoorException,
-			DoorAlreadyClosedException {
+		DoorAlreadyClosedException {
 		Labyrinth labyrinth = new Labyrinth("A$B", "A$C", "C|E", "B$D", "B|E",
 				"E$F", "D$F", "F|G");
 		labyrinth.popIn("A");
